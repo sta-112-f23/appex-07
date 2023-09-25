@@ -1,0 +1,59 @@
+---
+title: "Appex 07"
+author: "Put your name here!"
+format: 
+  html:
+    self-contained: true
+editor: visual
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+```{r}
+#| label: load-data
+
+load("data.rds")
+
+```
+
+Change the `id` below to *your* id. To look up what your ID is go here and enter your email address: https://lucy.shinyapps.io/sta-112-f23-id-lookup/
+
+```{r}
+#| label: filter-data
+
+data_sample <- data |>
+  filter(id == 9) ## change this to your ID 
+
+```
+
+-   Fit an intercept only model to calculate the average screen time in your sample
+
+```{r}
+#| label: model
+
+lm(--- ~ ----, data = data_sample)
+
+```
+
+-   Use the `summary` function on the linear model you fit
+
+```{r}
+
+```
+
+-   What is the standard error for the mean? Interpret this value.
+
+## Part 2
+
+-    Calculate the $t^*$ value for your confidence interval
+
+-   Calculate the confidence interval "by hand" using the $t^*$ value from the previous exercise and the mean and standard error from the previous application exercise
+
+-   Calculate the confidence interval using the \`confint\` function
+
+-    Interpret this value
